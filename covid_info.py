@@ -1,4 +1,4 @@
-pip install covid 
+# pip install covid 
 from covid import Covid
 
 covid = Covid(source="john_hopkins")

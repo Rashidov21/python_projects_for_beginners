@@ -1,5 +1,5 @@
-pynput==1.7.1
-pyperclip==1.8.1
+# pynput==1.7.1
+# pyperclip==1.8.1
 import pyperclip
 from datetime import datetime
 from pynput.keyboard import Listener

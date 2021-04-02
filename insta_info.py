@@ -1,15 +1,11 @@
+from bs4 import BeautifulSoup, Tag
 import requests
-from bs4 import BeautifulSoup
 
-url = 'https://ziyouz.uz/hikmatlar/aforizmlar/azmu-jazm-bilan-ish-tut-amir-temur-ogit-va-yoriqlaridan/'
-# user = str(input('Your username :'))
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'lxml')
+from collections import defaultdict
 
-publications = soup.findAll('p')
-res = []
-for p in publications:
-	res.append(p.text.strip())
+def find_most_common():
+	page = requests.get("https://en.wikipedia.org/wiki/Apple_Inc.")
+	soup = BeautifulSoup(page.text, "html.parser")
+	print(soup.text)
 
-for afo in res:
-	print(afo)
+find_most_common()

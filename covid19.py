@@ -1,20 +1,24 @@
 # importing modules
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup as bs
 
 # URL
 url = 'https://coronavirus.uz/ru'
 
 # get URL html
 page = requests.get(url)
-soup = BeautifulSoup(page.text, 'html.parser')
+soup = bs(page.text, 'html.parser')
 
-data = []
 
-confirmed = soup.findAll('p', class_='prg-count')
-for c in confirmed:
-    done = c.get('data-count')
-    data.append(done)
+
+def get_data():
+	data = []	
+	confirmed = soup.findAll('p', class_='prg-count')
+	for c in confirmed:
+	    done = c.get('data-count')
+	    data.append(done)
+	return data
+
 
 print(f"Всего подтверждено = {data[0]}")
 print(f"Выздоровевшие = {data[1]}")
