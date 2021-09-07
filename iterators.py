@@ -1,24 +1,47 @@
 #-*- coding:utf-8-*-
-import time 
-pacient = {}
-print("Klinikaga hush kelibsiz !")
-time.sleep(1)
-print('\a')
-print("Iltimos ma'lumotlaringizni kiriting.. ")
-time.sleep(2)
-print('\a')
+import itertools
+import requests
+import pprint
 
-while 1:
-    name = input('Ismingiz ?\n>>')
-    surname = input('Familyangiz ?\n>>')
-    if name and surname:
-        pacient['fullname'] = "{0} - {1}".format(name,surname)
-    age = int(input('Necha kilosiz ?\n>>'))
-    height = int(input('Boyingiz ?\n>>'))
-    if age and height:
-        pacient['age'] = age
-        pacient['height'] = height
-    disease = input('Kasalliklaringiz \n >>')
+url = 'https://randomuser.me/api/?results=1'
+users = requests.get(url).json()
+
+pprint.pprint(users)
+# for i in itertools.count(start=20, step=3): iterator with start and step
+#     if i > 100: break
+#     print(i)
+# n = 1
+# for i in itertools.cycle("abc"): iterator with cycle (loop)
+#     if n > 10: break
+#     print(i)
+#     n += 1
+
+# letters = list(itertools.repeat("letter:",10))
+# print(letters)
+# l = list(itertools.combinations("abcd", 2)) # comb items , mixed place (index) 1 param iterator 2 param count
+# l1 = list(itertools.combinations_with_replacement('abcd', 2))# comb items with orginal places
+# print(l1)
+
+# import time
+# pacient = {}
+# print("Klinikaga hush kelibsiz !")
+# time.sleep(1)
+# print('\a')
+# print("Iltimos ma'lumotlaringizni kiriting.. ")
+# time.sleep(2)
+# print('\a')
+#
+# while 1:
+#     name = input('Ismingiz ?\n>>')
+#     surname = input('Familyangiz ?\n>>')
+#     if name and surname:
+#         pacient['fullname'] = "{0} - {1}".format(name,surname)
+#     age = int(input('Necha kilosiz ?\n>>'))
+#     height = int(input('Boyingiz ?\n>>'))
+#     if age and height:
+#         pacient['age'] = age
+#         pacient['height'] = height
+#     disease = input('Kasalliklaringiz \n >>')
     
     
     
