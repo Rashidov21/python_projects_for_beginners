@@ -415,6 +415,8 @@ except ValueError:
 	print("Please enter a numeric value")
 else:
 	print("Your age is saved!")
+finally:
+    print("Finally block..")
 
 
 
@@ -443,7 +445,7 @@ product_2 = Product('iPhone12', 799.99)
 print(product_1.name) # iPadPro
 
 # instance method
-class Product()
+class Product:
     def display_price(self):
         return f"Price : {self.price}"
 
@@ -477,7 +479,8 @@ class WebProduct(Product):
 # Private scope (naming convention only)
 def __init__(self, price):
     self.__price = price
-
+# p = Product("Iphone11", 699.99)
+# p.__price
 # Getter and setter
 class Product:
     def __init__(self):

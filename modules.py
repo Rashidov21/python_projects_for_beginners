@@ -13,19 +13,25 @@ import math
 
 # print(factorial_recursive(5))
 
-class Parent:
-  def __init__(self, color):
-    self.color =  color
+# class Parent:
+#   def __init__(self, color):
+#     self.color =  color
+#
+#   def print_color(self):
+#     print(self.color)
+#
+# class Child(Parent):
+#   def __init__(self, color, name):
+#     super().__init__(color)
+#
+#
+#
+# x = Child('Negr')
+#
+# x.print_color()
 
-  def print_color(self):
-    print(self.color)
+m = input()
+n = m.split(" ")
+n.reverse()
+print("".join(n))
 
-class Child(Parent):
-  def __init__(self, color, name):
-    super().__init__(color)
-
-
-
-x = Child('Negr')
-
-x.print_color()
