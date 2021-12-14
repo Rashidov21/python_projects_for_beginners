@@ -19,7 +19,7 @@ def handle(msg):
 		Sog'ayganlar - {data[1]}, \n O'lganlar - {data[2]} \n \
 		Davolanishda - {data[3]}")
 		
-TOKEN = '1720356473:AAHPCnX2ukbcteThhYO2eVNv2WxO74jQ2Bs'
+TOKEN = 'TOKEN'
 bot = telepot.Bot(TOKEN)
 MessageLoop(bot, handle).run_as_thread()
 print ('Listening ...')
