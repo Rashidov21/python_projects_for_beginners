@@ -3,6 +3,7 @@ first_name = 'Mike'
 
 # Class and module CamelCase
 class InvoiceDetail:
+    pass
 
 # Constant
 MAX_USER = 100 # All uppercase
@@ -128,6 +129,9 @@ print(10 * '-') # ----------
 
 # Variable pretty printer (for debug)
 from pprint import pprint
+products = {
+    "name":"No name"
+}
 pprint(products) # will output var with formatting
 
 # Get keyboard input
@@ -171,7 +175,7 @@ if 'blue' in colors:
 if 'white' not in colors:
 
 # Ternary
-print('y = 10') if y == 10 else print('y != 10') 
+print('y = 10') if y == 10 else print('y != 10')
 
 # ShortHand Ternary
 is_valid = 'Valid'
@@ -194,7 +198,8 @@ for index, item in enumerate(items):
 
 # Range
 for i in range(10):  #0..9
-    print(i)
+    for x in range(5):
+        print(x)
 
 for i in range(5, 10): #5..9
     print(i)
@@ -212,12 +217,13 @@ while x > 10:
     x += 1
 
 # For loop dic
-for key, value in my_dict.items():
+for key, value in my_dict.items(): # ("name","Abdullo")
     print(key, value)
 
 # List comprehension: 
 # values = [(expression) for (value) in (collection)]
-items = [value*2 for value in items]
+items = [1,2,3,4,5]
+items2 = [value*2 for value in "abcde"]
 
 # List comprehension filtering
 # values = [expression for value in collection if condition]
@@ -276,10 +282,10 @@ colors.sort(key=lambda color: len(color)) # ['red', 'blue', 'green']
 product = {}
 
 #Create a dict with key/value
-product = {'id': 100, 'name': 'iPadPro'}
+product = {'id': 100, 'apple': 'iPadPro'}
 
 # Access dict value by key
-print(product['name']) # iPadPro
+print(product['name']) # KeyError
 
 # Access dict
 product.get('name') # if key not exist return None
@@ -305,7 +311,7 @@ products = [
 print(products[2]['name']) # Charger
 
 # Search list dict
-items_match = [item for product in products if product['id'] == 300]
+items_match = [product for product in products if product['id'] == 300]
 # [{'id': 300, 'name': 'Charger'}]
 
 # Sum list dict
